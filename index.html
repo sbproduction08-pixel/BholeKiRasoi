@@ -3,167 +3,372 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NGO Website - ₹10 Meal</title>
+    <title>NGO Website - ₹10 Meal Premium</title>
     <style>
-        /* Base Reset & Styling */
+        /* Modern Premium CSS Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', 'Segoe UI', system-ui, sans-serif;
+            scroll-behavior: smooth;
         }
         body {
-            background-color: #f8f9fa;
-            color: #333;
-            line-height: 1.6;
+            background-color: #fcfbf7;
+            color: #2c3e50;
+            overflow-x: hidden;
         }
-        /* Sticky Header / Tabs Menu */
+
+        /* Premium Sticky Navbar */
         header {
-            background: #fff;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
             position: sticky;
             top: 0;
-            z-index: 100;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 5%;
+            padding: 18px 8%;
+            border-bottom: 3px solid #e67e22;
         }
         .logo {
-            font-size: 20px;
-            font-weight: bold;
-            color: #e67e22;
+            font-size: 22px;
+            font-weight: 800;
+            color: #d35400;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        nav {
+            display: flex;
+            align-items: center;
         }
         nav a {
             text-decoration: none;
-            color: #333;
-            margin-left: 20px;
-            font-weight: 500;
-            transition: color 0.3s;
+            color: #34495e;
+            margin-left: 25px;
+            font-weight: 600;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #e67e22;
+            transition: width 0.3s ease;
+        }
+        nav a:hover::after {
+            width: 100%;
         }
         nav a:hover {
             color: #e67e22;
         }
-        /* Sections Common Style */
-        section {
-            padding: 60px 5%;
+        .nav-btn {
+            background: #e67e22;
+            color: #fff !important;
+            padding: 8px 18px;
+            border-radius: 4px;
+            box-shadow: 0 4px 10px rgba(230, 126, 34, 0.2);
         }
-        /* Hero Section Layout */
+        .nav-btn:hover {
+            background: #d35400;
+            box-shadow: 0 6px 15px rgba(211, 84, 0, 0.3);
+            transform: translateY(-1px);
+        }
+
+        /* General Section Layout */
+        section {
+            padding: 80px 8%;
+        }
+
+        /* Premium Hero Section */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('placeholder-banner.jpg') no-repeat center center/cover;
-            height: 70vh;
+            position: relative;
+            background: linear-gradient(135px, rgba(44, 62, 80, 0.95), rgba(26, 37, 47, 0.95)), url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1200') no-repeat center center/cover;
+            height: 75vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             color: #fff;
+            padding: 0 15%;
+            box-shadow: inset 0 -10px 20px rgba(0,0,0,0.1);
         }
         .hero h1 {
-            font-size: 40px;
-            margin-bottom: 15px;
+            font-size: 45px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
             color: #fff;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
-        /* Counters/Impact Grid Layout */
+        .hero p {
+            font-size: 18px;
+            color: #f1c40f;
+            margin-bottom: 35px;
+            font-weight: 400;
+            max-width: 700px;
+        }
+        .hero .cta-btn {
+            background: #e67e22;
+            color: white;
+            text-decoration: none;
+            padding: 14px 35px;
+            font-weight: 700;
+            border-radius: 5px;
+            font-size: 16px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
+            transition: all 0.3s ease;
+        }
+        .cta-btn:hover {
+            background: #d35400;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(211, 84, 0, 0.5);
+        }
+
+        /* Premium Section Titles */
+        .section-title {
+            text-align: center;
+            font-size: 30px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #e67e22;
+            margin: 10px auto 0 auto;
+            border-radius: 2px;
+        }
+        .section-subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 15px;
+            margin-bottom: 40px;
+        }
+
+        /* Our Impact Cards */
         .impact-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
         }
         .impact-card {
             background: #fff;
-            padding: 30px;
+            padding: 40px 30px;
             border-radius: 8px;
             text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            border-top: 4px solid #e67e22;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            border: 1px solid #f1f2f6;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .impact-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: #e67e22;
+        }
+        .impact-card:nth-child(2)::before { background: #27ae60; }
+        .impact-card:nth-child(3)::before { background: #2980b9; }
+
+        .impact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
         }
         .impact-card h2 {
-            font-size: 35px;
-            color: #e67e22;
+            font-size: 42px;
+            font-weight: 800;
             margin-bottom: 10px;
         }
-        /* Donation/QR Card Layout */
+        .impact-card:nth-child(1) h2 { color: #e67e22; }
+        .impact-card:nth-child(2) h2 { color: #27ae60; }
+        .impact-card:nth-child(3) h2 { color: #2980b9; }
+        
+        .impact-card p {
+            font-size: 16px;
+            font-weight: 600;
+            color: #34495e;
+            margin-bottom: 5px;
+        }
+        .impact-card span {
+            font-size: 13px;
+            color: #95a5a6;
+        }
+
+        /* Premium Donation Box */
         .donate-box {
-            background: #fdf2e9;
-            border: 1px solid #f5cba7;
-            border-radius: 8px;
-            padding: 40px;
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 50px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.03);
+            border: 1px solid #eaeaea;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-            gap: 20px;
+            gap: 40px;
+            position: relative;
         }
         .donate-details {
             flex: 1;
-            min-width: 300px;
+            min-width: 320px;
         }
-        .qr-placeholder {
-            width: 150px;
-            height: 150px;
+        .donate-details h2 {
+            color: #d35400;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        .donate-details p {
+            font-size: 15px;
+            color: #555;
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+        .bank-info-card {
+            background: #fdf2e9;
+            border-left: 4px solid #e67e22;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+        }
+        .bank-info-card p {
+            margin-bottom: 8px;
+            font-size: 15px;
+            font-weight: 500;
+            color: #2c3e50;
+        }
+        .bank-info-card p:last-child { margin-bottom: 0; }
+        
+        .qr-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+        .qr-card {
+            width: 180px;
+            height: 180px;
             background: #333;
             color: #fff;
             display: flex;
             justify-content: center;
             align-items: center;
             font-weight: bold;
-            border-radius: 4px;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border: 4px solid #fff;
+            outline: 1px solid #eaeaea;
+        }
+        .qr-container span {
+            font-size: 13px;
+            font-weight: 700;
+            color: #e67e22;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Clean Minimal Footer */
+        footer {
+            background: #2c3e50;
+            color: #bdc3c7;
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+            font-weight: 500;
+            border-top: 4px solid #d35400;
         }
     </style>
 </head>
 <body>
 
-    <!-- 1. Header & Navigation Tabs Menu -->
+    <!-- Premium Header Navbar -->
     <header>
-        <div class="logo" id="layout-logo">NGO Name Loading...</div>
+        <div class="logo" id="layout-logo">NGO Name...</div>
         <nav>
             <a href="#home">Home</a>
             <a href="#impact">Our Impact</a>
-            <a href="#donate">Donate</a>
+            <a href="#donate" class="nav-btn">Donate Now</a>
         </nav>
     </header>
 
-    <!-- 2. Hero Section Layout -->
+    <!-- Premium Hero Section -->
     <section id="home" class="hero">
-        <h1 id="layout-tagline">Loading Tagline...</h1>
-        <p id="layout-subtagline">Please wait...</p>
+        <h1 id="layout-tagline">Loading Premium Layout...</h1>
+        <p id="layout-subtagline">Connecting to verified server data layer...</p>
+        <a href="#donate" class="cta-btn">Support Our Cause</a>
     </section>
 
-    <!-- 3. Impact Section Layout -->
+    <!-- Premium Impact Section -->
     <section id="impact">
-        <h2 style="text-align: center; margin-bottom: 10px;">Our Impact (Humara Kaam)</h2>
+        <h2 class="section-title">Our Impact & Reach</h2>
+        <p class="section-subtitle">Real-time update of ground level change and verified transparency indicators.</p>
+        
         <div class="impact-container">
             <div class="impact-card">
                 <h2 id="cnt-meals">0+</h2>
                 <p>Total Meals Served</p>
+                <span>Ab tak baata gaya khana</span>
             </div>
             <div class="impact-card">
                 <h2 id="cnt-daily">0+</h2>
                 <p>Daily People Fed</p>
+                <span>Rozana khane wale log</span>
             </div>
             <div class="impact-card">
                 <h2 id="cnt-transparency">100%</h2>
                 <p>Transparency Status</p>
+                <span>Ek ek paise ka sahi use</span>
             </div>
         </div>
     </section>
 
-    <!-- 4. Donation Box Layout -->
-    <section id="donate">
+    <!-- Premium Donation Box -->
+    <section id="donate" style="background-color: #f7f9fa;">
         <div class="donate-box">
             <div class="donate-details">
-                <h2 style="color: #d35400; margin-bottom: 15px;">Help Us Feed More People</h2>
-                <p id="layout-bank-name">Bank Name: Loading...</p>
-                <p id="layout-bank-acc">Account No: Loading...</p>
-                <p id="layout-bank-ifsc">IFSC Code: Loading...</p>
+                <h2>Help Us Feed More People</h2>
+                <p>Aapki choti si madad kisi ko aatmasamman ke sath pet bhar khana de sakti hai. Direct bank transfer ya QR code scan karke support karein.</p>
+                
+                <div class="bank-info-card">
+                    <p id="layout-bank-name">Bank Name: Loading...</p>
+                    <p id="layout-bank-acc">Account No: Loading...</p>
+                    <p id="layout-bank-ifsc">IFSC Code: Loading...</p>
+                </div>
             </div>
-            <div class="qr-placeholder" id="layout-qr">[ QR CODE ]</div>
+            
+            <div class="qr-container">
+                <div class="qr-card" id="layout-qr">[ QR CODE ]</div>
+                <span>Scan to Donate</span>
+            </div>
         </div>
     </section>
 
-    <!-- 5. Connecting the Data Layer File -->
+    <!-- Corporate Minimal Footer -->
+    <footer>
+        <p>© 2026 NGO Foundation. Managed 100% Secure & Static via GitHub Pages.</p>
+    </footer>
+
+    <!-- Automatically maps variables from data.js -->
     <script src="data.js"></script>
 </body>
 </html>
