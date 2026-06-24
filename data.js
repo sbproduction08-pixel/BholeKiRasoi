@@ -28,7 +28,7 @@ const NGO_DATA = {
     Name : Bhole Ki Rasoi Seva Sansthan",
     accountNumber: "50200071072344",
     ifscCode: "HDFC 0006351",
-    qrCodeImage: "qr_code.png" // Yahan kal ko aapki QR image ka naam aa jayega
+    qrCodeImage: "payment qr.jpeg" // Yahan kal ko aapki QR image ka naam aa jayega
 };
 
 // ==========================================
