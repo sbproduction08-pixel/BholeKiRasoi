@@ -24,9 +24,10 @@ const NGO_DATA = {
     transparencyStatus: "100%",
 
     // Donation Details (Bank aur QR)
-    bankName: "Bhole Ki Rasoi Seva Sansthan (Update your original Bank Name)",
-    accountNumber: "XXXXXXXXXXXX (Update your Account Number)",
-    ifscCode: "SBIN0XXXXXX (Update your IFSC Code)",
+    bankName: "HDFC Bank - Panagar Jabalpur",
+    Name : Bhole Ki Rasoi Seva Sansthan",
+    accountNumber: "50200071072344",
+    ifscCode: "HDFC 0006351",
     qrCodeImage: "qr_code.png" // Yahan kal ko aapki QR image ka naam aa jayega
 };
 
