@@ -99,9 +99,7 @@
             padding: 80px 8%;
         }
 
-        /* ==========================================
-           PREMIUM BACKGROUND IMAGE SLIDER SYSTEM
-           ========================================== */
+        /* PREMIUM BACKGROUND IMAGE SLIDER SYSTEM */
         .hero {
             position: relative;
             height: 80vh;
@@ -112,23 +110,20 @@
             text-align: center;
             padding: 0 15%;
             border-bottom: 4px solid #d4af37;
-            overflow: hidden; /* Bahar ki images chhupane ke liye */
+            overflow: hidden;
         }
 
-        /* Slider Wrapper Window */
         .slider-container {
             position: absolute;
             top: 0;
             left: 0;
-            width: 300%; /* 3 Images hain toh 300% width */
+            width: 300%;
             height: 100%;
             display: flex;
             z-index: 1;
-            /* 12 Seconds total run time (4 seconds per image) aur infinite chalta rahega */
             animation: slideLayout 12s infinite ease-in-out; 
         }
 
-        /* Individual Image Slides with Dark Overlay Layer */
         .slide {
             width: 33.333%;
             height: 100%;
@@ -138,7 +133,6 @@
             position: relative;
         }
 
-        /* Overlay for text readability */
         .slide::before {
             content: '';
             position: absolute;
@@ -149,15 +143,13 @@
             background: linear-gradient(135px, rgba(20, 24, 30, 0.9), rgba(44, 53, 64, 0.85));
         }
 
-        /* Slider Control Keyframes (Left to Right Smooth Shift) */
         @keyframes slideLayout {
-            0%, 28% { transform: translateX(0); }       /* Slide 1 Base Time */
-            33%, 61% { transform: translateX(-33.333%); } /* Slide 2 Shift & Stay */
-            66%, 95% { transform: translateX(-66.666%); } /* Slide 3 Shift & Stay */
-            100% { transform: translateX(0); }           /* Bounce back smoothly to Slide 1 */
+            0%, 28% { transform: translateX(0); }
+            33%, 61% { transform: translateX(-33.333%); }
+            66%, 95% { transform: translateX(-66.666%); }
+            100% { transform: translateX(0); }
         }
 
-        /* Text Over Banner Layout (Z-Index is high to stay steady) */
         .hero-content {
             position: relative;
             z-index: 2; 
@@ -174,7 +166,7 @@
         }
         .hero p {
             font-size: 20px;
-            color: #dfb743; /* Shahi Gold highlighted content text */
+            color: #dfb743;
             margin-bottom: 40px;
             font-weight: 500;
             max-width: 800px;
@@ -379,7 +371,7 @@
 
     <header>
         <div class="logo-container">
-            <img id="layout-logo-img" class="logo-img" src="" alt="Logo">
+            <img id="layout-logo-img" class="logo-img" src="logo.png" alt="Logo">
             <div class="logo" id="layout-logo">Bhole Ki Rasoi</div>
         </div>
         <nav>
@@ -389,20 +381,14 @@
         </nav>
     </header>
 
-    <!-- Slidely Background Integrated Hero Banner Container -->
     <section id="home" class="hero">
         
-        <!-- Yahan piche images scroll ho rahi hain -->
         <div class="slider-container">
-            <!-- Image 1 -->
-            <div class="slide" style="background-image: url('slider3');"></div>
-            <!-- Image 2 -->
-            <div class="slide" style="background-image: url('slider2');"></div>
-            <!-- Image 3 -->
-            <div class="slide" style="background-image: url('slider1');"></div>
+            <div class="slide" style="background-image: url('slider3.jpg');"></div>
+            <div class="slide" style="background-image: url('slider2.jpg');"></div>
+            <div class="slide" style="background-image: url('slider1.jpg');"></div>
         </div>
 
-        <!-- Yahan content bilkul ek jagah premium tarike se tikka rahega -->
         <div class="hero-content">
             <h1 id="layout-tagline">Bhole Ki Rasoi Seva Sansthan</h1>
             <p id="layout-subtagline">Seva Se Hi Jeevan - Providing Nutritious ₹10 Meals with Dignity</p>
@@ -442,9 +428,9 @@
                 
                 <div class="bank-info-card">
                     <p id="layout-bank-name">Bank Name: HDFC Bank - Panagar Jabalpur</p>
-                    <p id="layout-bank-acc"> Name : Bhole Ki Rasoi Seva Sansthan </p>
+                    <p id="layout-bank-acc-holder"> Name : Bhole Ki Rasoi Seva Sansthan </p>
                     <p id="layout-bank-acc">Account No: 50200071072344</p>
-                    <p id="layout-bank-ifsc">IFSC Code: HDFC 0006351</p>
+                    <p id="layout-bank-ifsc">IFSC Code: HDFC0006351</p>
                     <p id="layout-reg-no" style="margin-top: 10px; font-size: 13px; color: #7f8c8d;"></p>
                 </div>
 
@@ -456,7 +442,7 @@
             </div>
             
             <div class="qr-container">
-                <img class="qr-card-img" id="layout-qr-img" src="" alt="Donation QR">
+                <img class="qr-card-img" id="layout-qr-img" src="qr-code.png" alt="Donation QR">
                 <span>Scan to Donate</span>
             </div>
         </div>
