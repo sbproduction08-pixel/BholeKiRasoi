@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NGO Website - ₹10 Meal Premium</title>
+    <title>Bhole Ki Rasoi Seva Sansthan - ₹10 Meal Premium</title>
     <style>
         /* Modern Premium CSS Reset */
         * {
@@ -30,11 +30,21 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 18px 8%;
+            padding: 12px 8%;
             border-bottom: 3px solid #e67e22;
         }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
         .logo {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 800;
             color: #d35400;
             letter-spacing: 0.5px;
@@ -92,7 +102,7 @@
         /* Premium Hero Section */
         .hero {
             position: relative;
-            background: linear-gradient(135px, rgba(44, 62, 80, 0.95), rgba(26, 37, 47, 0.95)), url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1200') no-repeat center center/cover;
+            background: linear-gradient(135px, rgba(44, 62, 80, 0.92), rgba(26, 37, 47, 0.95)), url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1200') no-repeat center center/cover;
             height: 75vh;
             display: flex;
             flex-direction: column;
@@ -108,7 +118,7 @@
             font-weight: 800;
             margin-bottom: 20px;
             letter-spacing: -0.5px;
-            line-height: 1.2;
+            line-height: 1.3;
             color: #fff;
             text-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
@@ -265,15 +275,10 @@
             align-items: center;
             gap: 12px;
         }
-        .qr-card {
+        .qr-card-img {
             width: 180px;
             height: 180px;
-            background: #333;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: bold;
+            object-fit: contain;
             border-radius: 8px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.08);
             border: 4px solid #fff;
@@ -301,9 +306,11 @@
 </head>
 <body>
 
-    <!-- Premium Header Navbar -->
     <header>
-        <div class="logo" id="layout-logo">NGO Name...</div>
+        <div class="logo-container">
+            <img id="layout-logo-img" class="logo-img" src="" alt="Logo">
+            <div class="logo" id="layout-logo">Bhole Ki Rasoi</div>
+        </div>
         <nav>
             <a href="#home">Home</a>
             <a href="#impact">Our Impact</a>
@@ -311,26 +318,24 @@
         </nav>
     </header>
 
-    <!-- Premium Hero Section -->
     <section id="home" class="hero">
-        <h1 id="layout-tagline">Loading Premium Layout...</h1>
-        <p id="layout-subtagline">Connecting to verified server data layer...</p>
+        <h1 id="layout-tagline">Bhole Ki Rasoi Seva Sansthan</h1>
+        <p id="layout-subtagline">Seva Se Hi Jeevan - Providing Nutritious ₹10 Meals with Dignity</p>
         <a href="#donate" class="cta-btn">Support Our Cause</a>
     </section>
 
-    <!-- Premium Impact Section -->
     <section id="impact">
         <h2 class="section-title">Our Impact & Reach</h2>
         <p class="section-subtitle">Real-time update of ground level change and verified transparency indicators.</p>
         
         <div class="impact-container">
             <div class="impact-card">
-                <h2 id="cnt-meals">0+</h2>
+                <h2 id="cnt-meals">50,000+</h2>
                 <p>Total Meals Served</p>
                 <span>Ab tak baata gaya khana</span>
             </div>
             <div class="impact-card">
-                <h2 id="cnt-daily">0+</h2>
+                <h2 id="cnt-daily">300+</h2>
                 <p>Daily People Fed</p>
                 <span>Rozana khane wale log</span>
             </div>
@@ -342,7 +347,6 @@
         </div>
     </section>
 
-    <!-- Premium Donation Box -->
     <section id="donate" style="background-color: #f7f9fa;">
         <div class="donate-box">
             <div class="donate-details">
@@ -353,22 +357,21 @@
                     <p id="layout-bank-name">Bank Name: Loading...</p>
                     <p id="layout-bank-acc">Account No: Loading...</p>
                     <p id="layout-bank-ifsc">IFSC Code: Loading...</p>
+                    <p id="layout-reg-no" style="margin-top: 10px; font-size: 13px; color: #7f8c8d;"></p>
                 </div>
             </div>
             
             <div class="qr-container">
-                <div class="qr-card" id="layout-qr">[ QR CODE ]</div>
+                <img class="qr-card-img" id="layout-qr-img" src="" alt="Donation QR">
                 <span>Scan to Donate</span>
             </div>
         </div>
     </section>
 
-    <!-- Corporate Minimal Footer -->
     <footer>
-        <p>© 2026 NGO Foundation. Managed 100% Secure & Static via GitHub Pages.</p>
+        <p>© 2026 Bhole Ki Rasoi Seva Sansthan. Registered under MP Society Registration Act, 1973 (Reg No: 04/14/01/22327/21). Managed 100% Secure via GitHub Pages.</p>
     </footer>
 
-    <!-- Automatically maps variables from data.js -->
     <script src="data.js"></script>
 </body>
 </html>
