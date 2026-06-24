@@ -5,38 +5,80 @@
 
 const NGO_DATA = {
     // Top Logo Aur Naam
-    ngoName: "ASHA MEAL NGO",
+    ngoName: "Bhole Ki Rasoi Seva Sansthan",
+    logoImage: "logo bfg.png", // Aapka logo file name
 
     // Main Page Ki Lines (Taglines)
-    mainTagline: "Pet Bhar Khana, Sirf ₹10 Me.",
-    subTagline: "No One Sleeps Hungry — Gareeb aur zarooratmand bhai-beheno ko aatmasamman ke sath rozana garam aur badiya khana.",
+    mainTagline: "भोले की रसोई सेवा संस्थान",
+    subTagline: "सेवा से ही जीवन — Gareeb aur zarooratmand bhai-beheno ko aatmasamman ke sath sirf ₹10 me rozana garam aur badiya khana.",
+
+    // Certificate Details (As per MP Registrar Office)
+    registrationNo: "04/14/01/22327/21",
+    registrationDate: "26 November 2021",
+    registeredOffice: "70/50 Manta Dairy Adhartal, Jabalpur, MP",
+    officialEmail: "bholekirasoi.jbp@gmail.com",
 
     // Impact Counters (Humara Kaam)
     totalMealsServed: "50,000+",
-    dailyPeopleFed: "500+",
-    transparencyStatus: "100% Transparent",
+    dailyPeopleFed: "300+",
+    transparencyStatus: "100%",
 
     // Donation Details (Bank aur QR)
-    bankName: "Asha Meal Foundation",
-    accountNumber: "98765432101",
-    ifscCode: "BARB0GURHXX (5th Digit is Zero)",
-    qrCodeText: "[ SCAN QR ]" // Yahan kal ko image ka naam aa jayega
+    bankName: "Bhole Ki Rasoi Seva Sansthan (Update your original Bank Name)",
+    accountNumber: "XXXXXXXXXXXX (Update your Account Number)",
+    ifscCode: "SBIN0XXXXXX (Update your IFSC Code)",
+    qrCodeImage: "qr_code.png" // Yahan kal ko aapki QR image ka naam aa jayega
 };
 
 // ==========================================
-// AUTOMATION LOGIC (Tujhe isko touch nahi karna h)
+// AUTOMATION LOGIC (Isko touch nahi karna h)
 // ==========================================
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("layout-logo").innerText = NGO_DATA.ngoName;
-    document.getElementById("layout-tagline").innerText = NGO_DATA.mainTagline;
-    document.getElementById("layout-subtagline").innerText = NGO_DATA.subTagline;
+    // Logo Text aur Image setup
+    if(document.getElementById("layout-logo")) {
+        document.getElementById("layout-logo").innerText = NGO_DATA.ngoName;
+    }
+    if(document.getElementById("layout-logo-img")) {
+        document.getElementById("layout-logo-img").src = NGO_DATA.logoImage;
+    }
     
-    document.getElementById("cnt-meals").innerText = NGO_DATA.totalMealsServed;
-    document.getElementById("cnt-daily").innerText = NGO_DATA.dailyPeopleFed;
-    document.getElementById("cnt-transparency").innerText = NGO_DATA.transparencyStatus;
+    // Taglines setup
+    if(document.getElementById("layout-tagline")) {
+        document.getElementById("layout-tagline").innerText = NGO_DATA.mainTagline;
+    }
+    if(document.getElementById("layout-subtagline")) {
+        document.getElementById("layout-subtagline").innerText = NGO_DATA.subTagline;
+    }
     
-    document.getElementById("layout-bank-name").innerText = "Bank Name: " + NGO_DATA.bankName;
-    document.getElementById("layout-bank-acc").innerText = "Account No: " + NGO_DATA.accountNumber;
-    document.getElementById("layout-bank-ifsc").innerText = "IFSC Code: " + NGO_DATA.ifscCode;
-    document.getElementById("layout-qr").innerText = NGO_DATA.qrCodeText;
+    // Impact counters setup
+    if(document.getElementById("cnt-meals")) {
+        document.getElementById("cnt-meals").innerText = NGO_DATA.totalMealsServed;
+    }
+    if(document.getElementById("cnt-daily")) {
+        document.getElementById("cnt-daily").innerText = NGO_DATA.dailyPeopleFed;
+    }
+    if(document.getElementById("cnt-transparency")) {
+        document.getElementById("cnt-transparency").innerText = NGO_DATA.transparencyStatus;
+    }
+    
+    // Bank details setup
+    if(document.getElementById("layout-bank-name")) {
+        document.getElementById("layout-bank-name").innerText = "Bank Name: " + NGO_DATA.bankName;
+    }
+    if(document.getElementById("layout-bank-acc")) {
+        document.getElementById("layout-bank-acc").innerText = "Account No: " + NGO_DATA.accountNumber;
+    }
+    if(document.getElementById("layout-bank-ifsc")) {
+        document.getElementById("layout-bank-ifsc").innerText = "IFSC Code: " + NGO_DATA.ifscCode;
+    }
+    
+    // Registration No insertion for trust factor
+    if(document.getElementById("layout-reg-no")) {
+        document.getElementById("layout-reg-no").innerText = "Reg No: " + NGO_DATA.registrationNo + " | Office: " + NGO_DATA.registeredOffice;
+    }
+    
+    // QR Code Image setup
+    if(document.getElementById("layout-qr-img")) {
+        document.getElementById("layout-qr-img").src = NGO_DATA.qrCodeImage;
+    }
 });
