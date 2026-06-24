@@ -25,9 +25,9 @@ const NGO_DATA = {
 
     // Donation Details (Bank aur QR)
     bankName: "HDFC Bank - Panagar Jabalpur",
-    Name : Bhole Ki Rasoi Seva Sansthan",
+    bankAccountName: "Bhole Ki Rasoi Seva Sansthan", // FIX: Sahi syntax string banaya
     accountNumber: "50200071072344",
-    ifscCode: "HDFC 0006351",
+    ifscCode: "HDFC0006351", // TIP: IFSC code me beech ka space hata diya h (HDFC0006351 standard hota h)
     qrCodeImage: "payment qr.jpeg" // Yahan kal ko aapki QR image ka naam aa jayega
 };
 
@@ -65,6 +65,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // Bank details setup
     if(document.getElementById("layout-bank-name")) {
         document.getElementById("layout-bank-name").innerText = "Bank Name: " + NGO_DATA.bankName;
+    }
+    // FIX: Account Holder Name ko HTML me inject karne ka code joda
+    if(document.getElementById("layout-bank-acc-holder")) {
+        document.getElementById("layout-bank-acc-holder").innerText = "Name: " + NGO_DATA.bankAccountName;
     }
     if(document.getElementById("layout-bank-acc")) {
         document.getElementById("layout-bank-acc").innerText = "Account No: " + NGO_DATA.accountNumber;
