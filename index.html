@@ -269,6 +269,23 @@
         }
         .bank-info-card p:last-child { margin-bottom: 0; }
         
+        /* Certificate Style */
+        .cert-link-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 15px;
+            color: #e67e22;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+        .cert-link-btn:hover {
+            color: #d35400;
+            text-decoration: underline;
+        }
+
         .qr-container {
             display: flex;
             flex-direction: column;
@@ -358,6 +375,13 @@
                     <p id="layout-bank-acc">Account No: Loading...</p>
                     <p id="layout-bank-ifsc">IFSC Code: Loading...</p>
                     <p id="layout-reg-no" style="margin-top: 10px; font-size: 13px; color: #7f8c8d;"></p>
+                </div>
+
+                <!-- YAHAN AAYEGA CERTIFICATE WALA LINK -->
+                <div>
+                    <a href="certificate registration.png" target="_blank" class="cert-link-btn">
+                        📄 View Govt. Registration Certificate
+                    </a>
                 </div>
             </div>
             
