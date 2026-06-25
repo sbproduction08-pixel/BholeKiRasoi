@@ -39,8 +39,8 @@
             gap: 12px;
         }
         .logo-img {
-            width: 170px;
-            height: 170px;
+            width: 150px;
+            height: 150px;
             object-fit: contain;
         }
         .logo {
@@ -74,6 +74,13 @@
             left: 0;
             background-color: #d4af37;
             transition: width 0.3s ease;
+        }
+        /* Dynamic Highlight Class via Scroll Script */
+        nav a.active-nav-link {
+            color: #e67e22 !important;
+        }
+        nav a.active-nav-link::after {
+            width: 100% !important;
         }
         nav a:hover::after { width: 100%; }
         nav a:hover { color: #e67e22; }
@@ -239,26 +246,19 @@
         .founder-text blockquote { font-size: 16px; color: #34495e; font-style: italic; line-height: 1.8; position: relative; padding-left: 25px; }
         .founder-text blockquote::before { content: '“'; position: absolute; left: 0; top: -10px; font-size: 50px; color: #d4af37; font-family: Georgia, serif; }
 
-        /* SIDE-BY-SIDE: TRACKER & MAP */
-        .tracker-map-row { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-        .tracker-card, .map-card { background: #fff; border: 1px solid #eaeaea; border-radius: 12px; padding: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.01); }
-        .tracker-card h3, .map-card h3 { font-size: 20px; color: #2c3e50; font-weight: 700; margin-bottom: 20px; border-bottom: 2px solid #f1f2f6; padding-bottom: 10px; }
-        .tracker-row { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px dashed #eaeaea; font-size: 14px; }
-        .tracker-row:last-child { border-bottom: none; }
-        .tracker-date { font-weight: 600; color: #e67e22; }
-        .tracker-desc { color: #2c3e50; font-weight: 500; }
-        .map-schedule-item { margin-bottom: 15px; background: #fcfbf7; border-left: 3px solid #2980b9; padding: 12px 15px; border-radius: 0 6px 6px 0; }
-        .map-schedule-item:last-child { margin-bottom: 0; }
-        .map-area { font-weight: 700; color: #2c3e50; font-size: 15px; }
-        .map-time { font-size: 13px; color: #7f8c8d; margin-top: 3px; }
-
         /* MOA COMMITTEE DASHBOARD */
         .dashboard-container { background: #ffffff; border-radius: 12px; padding: 30px; box-shadow: 0 15px 40px rgba(0,0,0,0.03); border: 1px solid #eaeaea; max-width: 1000px; margin: 0 auto; }
         .tab-navigation { display: flex; justify-content: center; gap: 10px; margin-bottom: 30px; border-bottom: 2px solid #eaeaea; padding-bottom: 15px; flex-wrap: wrap; }
+        .tab-btn {
+            background: #f1f2f6; color: #7f8c8d; border: none; padding: 12px 25px; font-size: 14px; font-weight: 700; cursor: pointer; border-radius: 6px; transition: all 0.3s ease; text-transform: uppercase;
+        }
+        .tab-btn.active-tab { background: #e67e22; color: #fff; box-shadow: 0 4px 12px rgba(230, 126, 34, 0.2); }
+        .tab-btn:hover:not(.active-tab) { background: #e1e2e6; color: #2c3e50; }
         .tab-content { display: none; text-align: center; animation: fadeIn 0.4s ease; }
         .tab-content.active-content { display: block; }
         .dashboard-preview-img { max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #eaeaea; box-shadow: 0 5px 15px rgba(0,0,0,0.05); cursor: pointer; transition: transform 0.2s; }
         .dashboard-preview-img:hover { transform: scale(1.01); border-color: #d4af37; }
+        .click-hint { display: block; margin-top: 10px; font-size: 13px; color: #e67e22; font-weight: 600; }
 
         /* PREMIUM GALLERY GRID */
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
@@ -318,6 +318,41 @@
         .qr-card-img { width: 190px; height: auto; max-height: 250px; object-fit: contain; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); border: 4px solid #fff; outline: 1px solid #eaeaea; }
         .qr-container span { font-size: 13px; font-weight: 700; color: #e67e22; text-transform: uppercase; letter-spacing: 1px; }
 
+        /* PREMIUM JUMPING FLOATING FACEBOOK BUTTON */
+        .fb-floating-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #1877f2;
+            border-radius: 50%;
+            box-shadow: 0 6px 20px rgba(24, 119, 242, 0.4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            text-decoration: none;
+            transition: transform 0.2s;
+            animation: fbJumpEffect 2s infinite ease-in-out;
+            border: 2px solid #fff;
+        }
+        .fb-floating-btn:hover {
+            background: #166fe5;
+            box-shadow: 0 8px 25px rgba(22, 111, 229, 0.5);
+            animation-play-state: paused;
+            transform: scale(1.1);
+        }
+        .fb-floating-btn svg {
+            width: 32px;
+            height: 32px;
+            fill: #fff;
+        }
+        @keyframes fbJumpEffect {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
         /* Lightbox Popup Modal */
         .modal-overlay { display: none; position: fixed; z-index: 2000; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.85); backdrop-filter: blur(5px); justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease; }
         .modal-content-img { max-width: 90%; max-height: 85vh; border-radius: 8px; box-shadow: 0 5px 30px rgba(0,0,0,0.5); border: 4px solid #fff; }
@@ -336,27 +371,35 @@
             .hero h1 { font-size: 34px; }
             .hero p { font-size: 16px; }
             .founder-section { flex-direction: column; padding: 25px; text-align: center; gap: 25px; }
-            .tracker-map-row { grid-template-columns: 1fr; gap: 30px; }
             .dashboard-container, .donate-box { padding: 20px; }
             .donate-details { min-width: 100%; text-align: center; }
+            .fb-floating-btn { width: 50px; height: 50px; bottom: 20px; right: 20px; }
+            .fb-floating-btn svg { width: 26px; height: 26px; }
         }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
 
+    <!-- JUMPING FLOATING FACEBOOK LINK ELEMENT -->
+    <a href="https://www.facebook.com/share/v/192xTNeLq4/" target="_blank" class="fb-floating-btn" title="Watch our Video on Facebook">
+        <svg viewBox="0 0 24 24">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+        </svg>
+    </a>
+
     <header>
         <div class="logo-container">
             <img id="layout-logo-img" class="logo-img" src="logo.png" alt="Logo">
             <div class="logo" id="layout-logo">Bhole Ki Rasoi</div>
         </div>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#values">Our Values</a>
-            <a href="#committee">Committee & MOA</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#audit">Audit Reports</a>
-            <a href="#donate" class="nav-btn">Donate Now</a>
+        <nav id="main-navbar">
+            <a href="#home" class="nav-link active-nav-link">Home</a>
+            <a href="#values" class="nav-link">Our Values</a>
+            <a href="#committee" class="nav-link">Committee & MOA</a>
+            <a href="#gallery" class="nav-link">Gallery</a>
+            <a href="#audit" class="nav-link">Audit Reports</a>
+            <a href="#donate" class="nav-btn nav-link">Donate Now</a>
         </nav>
     </header>
 
@@ -440,47 +483,8 @@
         </div>
     </section>
 
-    <!-- SECTION: LIVE TRACKER & MAP AREAS SCHEDULE -->
-    <section id="tracker-map" style="background-color: #f7f9fa; border-top: 1px solid #eaeaea;">
-        <div class="tracker-map-row">
-            <!-- Left Side: Live Transparency Tracker -->
-            <div class="tracker-card">
-                <h3>लाइव ट्रैकर बोर्ड (Live Seva Tracker)</h3>
-                <div class="tracker-row">
-                    <span class="tracker-date">Today Update</span>
-                    <span class="tracker-desc">310+ Meals Distributed Safely</span>
-                </div>
-                <div class="tracker-row">
-                    <span class="tracker-date">Yesterday</span>
-                    <span class="tracker-desc">305 People Fed with Dignity</span>
-                </div>
-                <div class="tracker-row">
-                    <span class="tracker-date">Weekly Status</span>
-                    <span class="tracker-desc">2,100+ Hot Meals Served on Ground</span>
-                </div>
-                <div class="tracker-row">
-                    <span class="tracker-date">Quality Check</span>
-                    <span class="tracker-desc">100% Fresh RO Water Used ✓</span>
-                </div>
-            </div>
-
-            <!-- Right Side: Location Schedule Map Card -->
-            <div class="map-card">
-                <h3>रसोई कहाँ मिलेगी? (Cart Location & Timing)</h3>
-                <div class="map-schedule-item">
-                    <div class="map-area">📍 Distribution Spot 1: Adhartal Area, Jabalpur</div>
-                    <div class="map-time">Timing: Daily Afternoon (12:30 PM to 2:30 PM)</div>
-                </div>
-                <div class="map-schedule-item">
-                    <div class="map-area">📍 Distribution Spot 2: Mobile Seva Cart Location</div>
-                    <div class="map-time">Timing: Daily Evening Schedule (As per Requirements)</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- SECTION: MOA DASHBOARD -->
-    <section id="committee">
+    <section id="committee" style="background-color: #f7f9fa; border-top: 1px solid #eaeaea;">
         <h2 class="section-title">Official Documentation & Committee</h2>
         <p class="section-subtitle">Verified organization objectives, executive body details, and government registration authority.</p>
         <div class="dashboard-container">
@@ -505,7 +509,7 @@
     </section>
 
     <!-- PREMIUM GALLERY GRID SECTION -->
-    <section id="gallery" style="background-color: #f7f9fa; border-top: 1px solid #eaeaea;">
+    <section id="gallery">
         <h2 class="section-title">सेवा दीर्घा (Photo Gallery)</h2>
         <p class="section-subtitle">Real ground-level work glimpses of nutritious food preparation and distribution drives.</p>
         <div class="gallery-grid">
@@ -529,7 +533,7 @@
     </section>
 
     <!-- AUDIT REPORT SECTION -->
-    <section id="audit">
+    <section id="audit" style="background-color: #f7f9fa; border-top: 1px solid #eaeaea;">
         <h2 class="section-title">Fund Utilization Dashboard</h2>
         <p class="section-subtitle">Official dynamic breakdown of expenditure and financial audit status indicators.</p>
         <div class="audit-container">
@@ -566,15 +570,15 @@
         <div class="faq-wrapper">
             <div class="faq-item">
                 <button class="faq-trigger" onclick="toggleFaq(this)">❓ क्या भोले की रसोई सरकारी संसथान है? <span>+</span></button>
-                <div class="faq-answer">नहीं, यह पूरी तरह से एक पंजीकृत स्वायत्त सेवा संस्थान (Registered NGO) है जो समाज के दानदाताओं के सहयोग से पूरी पारदर्शिता के साथ संचालित किया जाता है।</div>
+                <div class="faq-answer">नहीं, यह पूरी तरह से एक गैर-सरकारी, पंजीकृत स्वायत्त सेवा संस्थान (Registered NGO) है जो समाज के दानदाताओं के सहयोग से पूरी पारदर्शिता के साथ संचालित किया जाता है।</div>
             </div>
             <div class="faq-item">
                 <button class="faq-trigger" onclick="toggleFaq(this)">❓ खाना ₹10 में क्यों दिया जाता है, फ्री क्यों नहीं? <span>+</span></button>
-                <div class="faq-answer">खाना ₹10 में देने के पीछे मुख्य कारण भोजन ग्रहण करने वाले भाई-बहनों के आत्मसम्मान (Dignity) की रक्षा करना है ताकि उन्हें कभी यह न लगे कि वे मुफ्त का भोजन कर रहे हैं। साथ ही, टोकन प्राइस होने से भोजन की बर्बादी बिल्कुल नहीं होती।</div>
+                <div class="faq-answer">खाना ₹10 में देने के पीछे मुख्य कारण भोजन ग्रहण करने वाले भाई-बहनों के आत्मसम्मान (Dignity) की रक्षा करना है ताकि उन्हें कभी यह न लगे कि वे मुफ्त का भोजन कर रहे हैं। साथ ही, टोकन派 होने से भोजन की बर्बादी बिल्कुल नहीं होती।</div>
             </div>
             <div class="faq-item">
                 <button class="faq-trigger" onclick="toggleFaq(this)">❓ दान किए गए पैसे का हिसाब कहाँ मिलता है? <span>+</span></button>
-                <div class="faq-answer">हम पारदर्शिता में 100% विश्वास रखते हैं। आप इसी वेबसाइट के 'Audit Reports' सेक्शन में जाकर हर साल का अधिकृत चार्टर्ड अकाउंटेंट (CA) द्वारा वेरिफाइड इनकम-एक्सपेंडिचर और बैलेंस शीट का पूरा ब्यौरा लाइव देख सकते हैं।[cite: 1, 2]</div>
+                <div class="faq-answer">हम पारदर्शिता में 100% विश्वास रखते हैं। आप इसी वेबसाइट के 'Audit Reports' सेक्शन में जाकर हर साल का अधिकृत चार्टर्ड अकाउंटेंट (CA) द्वारा वेरिफाइड इनकम-एक्सपेंडिचर और बैलेंस शीट का पूरा ब्यौरा लाइव देख सकते हैं।</div>
             </div>
             <div class="faq-item">
                 <button class="faq-trigger" onclick="toggleFaq(this)">❓ क्या हम पैसे के बजाय सीधे राशन (आटा, चावल, तेल) दान कर सकते हैं? <span>+</span></button>
@@ -588,7 +592,7 @@
     </section>
 
     <!-- DONATION BOX & SPONSOR CALCULATOR SECTION -->
-    <section id="donate">
+    <section id="donate" style="background-color: #f7f9fa; border-top: 1px solid #eaeaea;">
         <div class="donate-box">
             <div class="donate-details">
                 <h2>Help Us Feed More People</h2>
@@ -626,7 +630,7 @@
         </div>
     </section>
 
-    <!-- Global Lightbox -->
+    <!-- Global Shared Lightbox Modal -->
     <div id="global-popup-modal" class="modal-overlay" onclick="closePopupModal()">
         <span class="close-modal-btn">&times;</span>
         <img class="modal-content-img" id="modal-popup-target-img" src="" alt="Enlarged Document">
@@ -639,7 +643,7 @@
     <script src="data.js"></script>
 
     <script>
-        // Tab Navigation Switcher
+        // Committee Tab Navigation Logic
         function switchDashboardTab(event, tabId) {
             const contentItems = document.getElementsByClassName("tab-content");
             for (let i = 0; i < contentItems.length; i++) { contentItems[i].classList.remove("active-content"); }
@@ -713,6 +717,32 @@
             modal.classList.remove("show");
             setTimeout(() => { modal.style.display = "none"; }, 300);
         }
+
+        // --- NEW AUTOMATIC SCROLL NAVIGATION HIGHLIGHT ENGINE ---
+        const sections = document.querySelectorAll("section[id]");
+        const navLinks = document.querySelectorAll("#main-navbar .nav-link");
+
+        window.addEventListener("scroll", () => {
+            let currentSectionId = "";
+            const scrollPosition = window.scrollY + 120; // Added offset buffer for top sticky header bar
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                if (scrollPosition >= sectionTop && scrollPosition < (sectionTop + sectionHeight)) {
+                    currentSectionId = section.getAttribute("id");
+                }
+            });
+
+            if (currentSectionId) {
+                navLinks.forEach(link => {
+                    link.classList.remove("active-nav-link");
+                    if (link.getAttribute("href") === `#${currentSectionId}`) {
+                        link.classList.add("active-nav-link");
+                    }
+                });
+            }
+        });
     </script>
 </body>
 </html>
