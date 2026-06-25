@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bhole Ki Rasoi Seva Sansthan - ₹10 Meal </title>
+    <title>Bhole Ki Rasoi Seva Sansthan - ₹10 Meal Premium</title>
     <style>
         /* Modern Premium CSS Reset */
         * {
@@ -75,12 +75,8 @@
             background-color: #d4af37;
             transition: width 0.3s ease;
         }
-        nav a:hover::after {
-            width: 100%;
-        }
-        nav a:hover {
-            color: #e67e22;
-        }
+        nav a:hover::after { width: 100%; }
+        nav a:hover { color: #e67e22; }
         .nav-btn {
             background: #e67e22;
             color: #fff !important;
@@ -95,11 +91,9 @@
         }
 
         /* General Section Layout */
-        section {
-            padding: 80px 8%;
-        }
+        section { padding: 80px 8%; }
 
-        /* PREMIUM BACKGROUND IMAGE SLIDER SYSTEM WITH PAUSE/PLAY & DOTS */
+        /* HERO BANNER SLIDER */
         .hero {
             position: relative;
             height: 80vh;
@@ -113,7 +107,6 @@
             overflow: hidden;
             cursor: pointer;
         }
-
         .slider-container {
             position: absolute;
             top: 0;
@@ -123,11 +116,7 @@
             display: flex;
             z-index: 1;
         }
-        
-        .slider-running {
-            animation: slideLayout 12s infinite ease-in-out;
-        }
-
+        .slider-running { animation: slideLayout 12s infinite ease-in-out; }
         .slide {
             width: 33.333%;
             height: 100%;
@@ -136,7 +125,6 @@
             background-repeat: no-repeat;
             position: relative;
         }
-
         .slide::before {
             content: '';
             position: absolute;
@@ -146,14 +134,12 @@
             height: 100%;
             background: linear-gradient(135px, rgba(20, 24, 30, 0.9), rgba(44, 53, 64, 0.85));
         }
-
         @keyframes slideLayout {
             0%, 28% { transform: translateX(0); }
             33%, 61% { transform: translateX(-33.333%); }
             66%, 95% { transform: translateX(-66.666%); }
             100% { transform: translateX(0); }
         }
-
         .slider-dots {
             position: absolute;
             bottom: 25px;
@@ -175,7 +161,6 @@
             transform: scale(1.3);
             box-shadow: 0 0 10px #dfb743;
         }
-        
         .slider-state-indicator {
             position: absolute;
             bottom: 50px;
@@ -191,19 +176,13 @@
             pointer-events: none;
             opacity: 0.7;
         }
-
-        .hero-content {
-            position: relative;
-            z-index: 2; 
-            color: #fff;
-        }
+        .hero-content { position: relative; z-index: 2; color: #fff; }
         .hero h1 {
             font-size: 52px;
             font-weight: 800;
             margin-bottom: 20px;
             letter-spacing: 1px;
             line-height: 1.3;
-            color: #ffffff;
             text-shadow: 0 3px 15px rgba(0,0,0,0.6);
         }
         .hero p {
@@ -215,439 +194,153 @@
             line-height: 1.6;
             text-shadow: 0 2px 8px rgba(0,0,0,0.5);
         }
-        .hero .cta-btn {
-            background: #e67e22;
-            color: #fff;
-            text-decoration: none;
-            padding: 16px 40px;
-            font-weight: 700;
-            border-radius: 6px;
-            font-size: 16px;
-            text-transform: uppercase;
-            box-shadow: 0 5px 20px rgba(230, 126, 34, 0.4);
-            transition: all 0.3s ease;
-            letter-spacing: 0.5px;
-            display: inline-block;
-        }
-        .cta-btn:hover {
-            background: #d35400;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(211, 84, 0, 0.6);
-        }
 
-        /* Premium Section Titles */
-        .section-title {
-            text-align: center;
-            font-size: 30px;
-            font-weight: 700;
-            color: #2c3e50;
-            margin-bottom: 15px;
-            position: relative;
-        }
+        /* Section Titles */
+        .section-title { text-align: center; font-size: 30px; font-weight: 700; color: #2c3e50; margin-bottom: 15px; position: relative; }
         .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background: #e67e22;
-            margin: 10px auto 0 auto;
-            border-radius: 2px;
+            content: ''; display: block; width: 60px; height: 3px; background: #e67e22; margin: 10px auto 0 auto; border-radius: 2px;
         }
-        .section-subtitle {
-            text-align: center;
-            color: #7f8c8d;
-            font-size: 15px;
-            margin-bottom: 40px;
-        }
+        .section-subtitle { text-align: center; color: #7f8c8d; font-size: 15px; margin-bottom: 40px; }
 
-        /* Our Impact Cards */
-        .impact-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
+        /* Impact Grid */
+        .impact-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
         .impact-card {
-            background: #fff;
-            padding: 40px 30px;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-            border: 1px solid #f1f2f6;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
+            background: #fff; padding: 40px 30px; border-radius: 8px; text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid #f1f2f6; transition: all 0.3s ease; position: relative; overflow: hidden;
         }
-        .impact-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: #e67e22;
-        }
+        .impact-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: #e67e22; }
         .impact-card:nth-child(2)::before { background: #27ae60; }
         .impact-card:nth-child(3)::before { background: #2980b9; }
-
-        .impact-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-        }
-        .impact-card h2 {
-            font-size: 42px;
-            font-weight: 800;
-            margin-bottom: 10px;
-        }
+        .impact-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.08); }
+        .impact-card h2 { font-size: 42px; font-weight: 800; margin-bottom: 10px; }
         .impact-card:nth-child(1) h2 { color: #e67e22; }
         .impact-card:nth-child(2) h2 { color: #27ae60; }
         .impact-card:nth-child(3) h2 { color: #2980b9; }
-        
-        .impact-card p {
-            font-size: 16px;
-            font-weight: 600;
-            color: #34495e;
-            margin-bottom: 5px;
-        }
-        .impact-card span {
-            font-size: 13px;
-            color: #95a5a6;
-        }
+        .impact-card p { font-size: 16px; font-weight: 600; color: #34495e; margin-bottom: 5px; }
+        .impact-card span { font-size: 13px; color: #95a5a6; }
 
-        /* 3-Tab Dashboard for Committee */
-        .dashboard-container {
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.03);
-            border: 1px solid #eaeaea;
-            max-width: 1000px;
-            margin: 0 auto;
+        /* CORE VALUES SECTION */
+        .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .value-card {
+            background: #fff; border: 1px solid #eaeaea; border-radius: 12px; padding: 30px; text-align: center; transition: 0.3s;
         }
-        .tab-navigation {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 30px;
-            border-bottom: 2px solid #eaeaea;
-            padding-bottom: 15px;
-            flex-wrap: wrap;
-        }
-        .tab-btn {
-            background: #f1f2f6;
-            color: #7f8c8d;
-            border: none;
-            padding: 12px 25px;
-            font-size: 14px;
-            font-weight: 700;
-            cursor: pointer;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-        }
-        .tab-btn.active-tab {
-            background: #e67e22;
-            color: #fff;
-            box-shadow: 0 4px 12px rgba(230, 126, 34, 0.2);
-        }
-        .tab-btn:hover:not(.active-tab) {
-            background: #e1e2e6;
-            color: #2c3e50;
-        }
-        .tab-content {
-            display: none;
-            text-align: center;
-            animation: fadeIn 0.4s ease;
-        }
-        .tab-content.active-content {
-            display: block;
-        }
-        .dashboard-preview-img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            border: 1px solid #eaeaea;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-        .dashboard-preview-img:hover {
-            transform: scale(1.01);
-            border-color: #d4af37;
-        }
+        .value-card:hover { border-color: #d4af37; transform: translateY(-3px); box-shadow: 0 10px 25px rgba(212,175,55,0.08); }
+        .value-icon { font-size: 36px; margin-bottom: 15px; display: block; }
+        .value-card h3 { font-size: 18px; color: #2c3e50; margin-bottom: 10px; font-weight: 700; }
+        .value-card p { font-size: 14px; color: #7f8c8d; line-height: 1.6; }
 
-        /* PREMIUM PIE CHART AUDIT CARD DESIGN (CLEAN VIEW - NO POPUPS) */
-        .audit-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 40px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        .audit-card {
-            background: #fff;
-            border: 1px solid #eaeaea;
-            border-radius: 16px;
-            padding: 35px 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transition: all 0.3s ease;
-        }
-        .audit-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.15);
-            border-color: #d4af37;
-        }
-        .audit-year { 
-            font-size: 22px; 
-            font-weight: 800; 
-            color: #2c3e50; 
-            margin-bottom: 5px; 
-        }
-        .audit-status { 
-            color: #27ae60; 
-            font-size: 13px; 
-            font-weight: 700; 
-            margin-bottom: 30px; 
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .pie-chart-wrapper {
-            position: relative;
-            margin-bottom: 25px;
-        }
-        .pie-chart {
-            width: 190px;
-            height: 190px;
-            border-radius: 50%;
-            box-shadow: inset 0 0 20px rgba(0,0,0,0.1), 0 8px 25px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-            border: 4px solid #fff;
-        }
-        .pie-chart-wrapper:hover .pie-chart {
-            transform: scale(1.03);
-        }
-        
-        /* 22-23 Gradients */
-        .chart-22-23 {
-            background: conic-gradient(
-                #e67e22 0% 50%, 
-                #2980b9 50% 89%, 
-                #27ae60 89% 95%, 
-                #95a5a6 95% 100%
-            );
-        }
-        /* 23-24 Gradients */
-        .chart-23-24 {
-            background: conic-gradient(
-                #e67e22 0% 49%, 
-                #2980b9 49% 89%, 
-                #27ae60 89% 96%, 
-                #95a5a6 96% 100%
-            );
-        }
+        /* FOUNDER MESSAGE SECTION */
+        .founder-section { display: flex; align-items: center; gap: 50px; background: #fff; border-radius: 16px; padding: 45px; border: 1px solid #eaeaea; box-shadow: 0 10px 30px rgba(0,0,0,0.02); }
+        .founder-img-box { flex: 0 0 220px; text-align: center; }
+        .founder-img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 4px solid #d4af37; box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        .founder-img-box h4 { font-size: 18px; color: #2c3e50; margin-top: 15px; font-weight: 700; }
+        .founder-img-box p { font-size: 13px; color: #e67e22; font-weight: 600; text-transform: uppercase; margin-top: 2px; }
+        .founder-text { flex: 1; }
+        .founder-text blockquote { font-size: 16px; color: #34495e; font-style: italic; line-height: 1.8; position: relative; padding-left: 25px; }
+        .founder-text blockquote::before { content: '“'; position: absolute; left: 0; top: -10px; font-size: 50px; color: #d4af37; font-family: Georgia, serif; }
 
-        /* Chart Legends Table Details Layout */
-        .chart-legend-box {
-            width: 100%;
-            border-top: 1px dashed #eaeaea;
-            padding-top: 25px;
-            margin-top: 10px;
-        }
-        .legend-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 12px;
-            font-size: 14px;
-        }
-        .legend-item:last-child { margin-bottom: 0; }
-        .legend-label {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
-            color: #555;
-        }
-        .color-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 3px;
-            display: inline-block;
-        }
+        /* SIDE-BY-SIDE: TRACKER & MAP */
+        .tracker-map-row { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .tracker-card, .map-card { background: #fff; border: 1px solid #eaeaea; border-radius: 12px; padding: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.01); }
+        .tracker-card h3, .map-card h3 { font-size: 20px; color: #2c3e50; font-weight: 700; margin-bottom: 20px; border-bottom: 2px solid #f1f2f6; padding-bottom: 10px; }
+        .tracker-row { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px dashed #eaeaea; font-size: 14px; }
+        .tracker-row:last-child { border-bottom: none; }
+        .tracker-date { font-weight: 600; color: #e67e22; }
+        .tracker-desc { color: #2c3e50; font-weight: 500; }
+        .map-schedule-item { margin-bottom: 15px; background: #fcfbf7; border-left: 3px solid #2980b9; padding: 12px 15px; border-radius: 0 6px 6px 0; }
+        .map-schedule-item:last-child { margin-bottom: 0; }
+        .map-area { font-weight: 700; color: #2c3e50; font-size: 15px; }
+        .map-time { font-size: 13px; color: #7f8c8d; margin-top: 3px; }
+
+        /* MOA COMMITTEE DASHBOARD */
+        .dashboard-container { background: #ffffff; border-radius: 12px; padding: 30px; box-shadow: 0 15px 40px rgba(0,0,0,0.03); border: 1px solid #eaeaea; max-width: 1000px; margin: 0 auto; }
+        .tab-navigation { display: flex; justify-content: center; gap: 10px; margin-bottom: 30px; border-bottom: 2px solid #eaeaea; padding-bottom: 15px; flex-wrap: wrap; }
+        .tab-content { display: none; text-align: center; animation: fadeIn 0.4s ease; }
+        .tab-content.active-content { display: block; }
+        .dashboard-preview-img { max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #eaeaea; box-shadow: 0 5px 15px rgba(0,0,0,0.05); cursor: pointer; transition: transform 0.2s; }
+        .dashboard-preview-img:hover { transform: scale(1.01); border-color: #d4af37; }
+
+        /* PREMIUM GALLERY GRID */
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+        .gallery-item { position: relative; border-radius: 8px; overflow: hidden; border: 1px solid #eaeaea; box-shadow: 0 4px 15px rgba(0,0,0,0.02); height: 180px; cursor: pointer; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
+        .gallery-item:hover img { transform: scale(1.08); }
+        .gallery-overlay { position: absolute; bottom: 0; left: 0; width: 100%; padding: 10px; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: #fff; font-size: 12px; font-weight: 500; text-align: center; }
+
+        /* AUDIT PIE CHARTS CHANNELS */
+        .audit-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; max-width: 1100px; margin: 0 auto; }
+        .audit-card { background: #fff; border: 1px solid #eaeaea; border-radius: 16px; padding: 35px 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.02); display: flex; flex-direction: column; align-items: center; transition: all 0.3s ease; }
+        .audit-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(212, 175, 55, 0.15); border-color: #d4af37; }
+        .audit-year { font-size: 22px; font-weight: 800; color: #2c3e50; margin-bottom: 5px; }
+        .audit-status { color: #27ae60; font-size: 13px; font-weight: 700; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .pie-chart-wrapper { position: relative; margin-bottom: 25px; }
+        .pie-chart { width: 190px; height: 190px; border-radius: 50%; box-shadow: inset 0 0 20px rgba(0,0,0,0.1), 0 8px 25px rgba(0,0,0,0.1); border: 4px solid #fff; }
+        .chart-22-23 { background: conic-gradient(#e67e22 0% 50%, #2980b9 50% 89%, #27ae60 89% 95%, #95a5a6 95% 100%); }
+        .chart-23-24 { background: conic-gradient(#e67e22 0% 49%, #2980b9 49% 89%, #27ae60 89% 96%, #95a5a6 96% 100%); }
+        .chart-legend-box { width: 100%; border-top: 1px dashed #eaeaea; padding-top: 25px; margin-top: 10px; }
+        .legend-item { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-size: 14px; }
+        .legend-label { display: flex; align-items: center; gap: 10px; font-weight: 500; color: #555; }
+        .color-dot { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
         .dot-orange { background: #e67e22; }
         .dot-blue { background: #2980b9; }
         .dot-green { background: #27ae60; }
         .dot-grey { background: #95a5a6; }
         .legend-amount { font-weight: 700; color: #2c3e50; }
+        .ca-verification-bar { grid-column: 1 / -1; background: #f1f2f6; border-left: 5px solid #27ae60; padding: 15px 25px; border-radius: 4px; font-size: 14px; font-weight: 600; color: #34495e; text-align: center; width: 100%; }
 
-        .ca-verification-bar {
-            grid-column: 1 / -1;
-            background: #f1f2f6;
-            border-left: 5px solid #27ae60;
-            padding: 15px 25px;
-            border-radius: 4px;
-            font-size: 14px;
-            font-weight: 600;
-            color: #34495e;
-            text-align: center;
-            margin-top: 10px;
-            width: 100%;
-        }
+        /* SPONSOR CALCULATOR WIDGET */
+        .calculator-wrapper { background: #fdf2e9; border: 1px solid #f5d6b3; border-radius: 12px; padding: 25px; margin-bottom: 30px; width: 100%; }
+        .calculator-wrapper h4 { font-size: 16px; color: #d35400; font-weight: 700; margin-bottom: 15px; text-transform: uppercase; text-align: center; }
+        .calc-buttons { display: flex; gap: 10px; justify-content: center; margin-bottom: 15px; flex-wrap: wrap; }
+        .calc-btn { background: #fff; border: 2px solid #e67e22; color: #e67e22; padding: 8px 20px; font-weight: 700; font-size: 15px; border-radius: 6px; cursor: pointer; transition: 0.2s; }
+        .calc-btn.active-calc { background: #e67e22; color: #fff; }
+        .calc-result-box { text-align: center; font-size: 14px; color: #2c3e50; font-weight: 600; background: #fff; padding: 10px; border-radius: 4px; border: 1px solid #eaeaea; min-height: 42px; display: flex; align-items: center; justify-content: center; }
 
-        /* Premium Donation Box */
-        .donate-box {
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 50px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.03);
-            border: 1px solid #eaeaea;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            gap: 40px;
-            position: relative;
-        }
-        .donate-details {
-            flex: 1;
-            min-width: 320px;
-        }
-        .donate-details h2 {
-            color: #d35400;
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-        .donate-details p {
-            font-size: 15px;
-            color: #555;
-            margin-bottom: 25px;
-            line-height: 1.7;
-        }
-        .bank-info-card {
-            background: #fdf2e9;
-            border-left: 4px solid #e67e22;
-            padding: 20px;
-            border-radius: 0 8px 8px 0;
-        }
-        .bank-info-card p {
-            margin-bottom: 8px;
-            font-size: 15px;
-            font-weight: 500;
-            color: #2c3e50;
-        }
+        /* FAQ ACCORDION HANDLERS */
+        .faq-wrapper { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; }
+        .faq-item { background: #fff; border: 1px solid #eaeaea; border-radius: 8px; overflow: hidden; }
+        .faq-trigger { width: 100%; background: none; border: none; padding: 18px 25px; text-align: left; font-size: 15px; font-weight: 700; color: #2c3e50; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: 0.2s; }
+        .faq-trigger:hover { background: #fcfbf7; color: #e67e22; }
+        .faq-answer { display: none; padding: 0 25px 20px 25px; font-size: 14px; color: #555; line-height: 1.7; background: #fff; }
+        .faq-item.open .faq-answer { display: block; }
+        .faq-item.open .faq-trigger { color: #e67e22; border-bottom: 1px dashed #eaeaea; }
+
+        /* Donation Box & Layouts */
+        .donate-box { background: #ffffff; border-radius: 12px; padding: 50px; box-shadow: 0 15px 40px rgba(0,0,0,0.03); border: 1px solid #eaeaea; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 40px; }
+        .donate-details { flex: 1; min-width: 320px; }
+        .donate-details h2 { color: #d35400; font-size: 28px; font-weight: 700; margin-bottom: 15px; }
+        .donate-details p { font-size: 15px; color: #555; margin-bottom: 25px; line-height: 1.7; }
+        .bank-info-card { background: #fdf2e9; border-left: 4px solid #e67e22; padding: 20px; border-radius: 0 8px 8px 0; }
+        .bank-info-card p { margin-bottom: 8px; font-size: 15px; font-weight: 500; color: #2c3e50; }
         .bank-info-card p:last-child { margin-bottom: 0; }
-        
-        .cert-link-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            margin-top: 15px;
-            color: #e67e22;
-            font-weight: 600;
-            text-decoration: none;
-            font-size: 14px;
-            transition: color 0.2s;
-        }
-        .cert-link-btn:hover {
-            color: #d35400;
-            text-decoration: underline;
-        }
+        .cert-link-btn { display: inline-flex; align-items: center; gap: 6px; margin-top: 15px; color: #e67e22; font-weight: 600; text-decoration: none; font-size: 14px; }
+        .qr-container { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+        .qr-card-img { width: 190px; height: auto; max-height: 250px; object-fit: contain; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); border: 4px solid #fff; outline: 1px solid #eaeaea; }
+        .qr-container span { font-size: 13px; font-weight: 700; color: #e67e22; text-transform: uppercase; letter-spacing: 1px; }
 
-        .qr-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 12px;
-        }
-        .qr-card-img {
-            width: 190px;
-            height: auto;
-            max-height: 250px;
-            object-fit: contain;
-            border-radius: 8px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-            border: 4px solid #fff;
-            outline: 1px solid #eaeaea;
-        }
-        .qr-container span {
-            font-size: 13px;
-            font-weight: 700;
-            color: #e67e22;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Global Shared Lightbox Popup Box Modal */
-        .modal-overlay {
-            display: none;
-            position: fixed;
-            z-index: 2000;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.85);
-            backdrop-filter: blur(5px);
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        .modal-content-img {
-            max-width: 90%;
-            max-height: 85vh;
-            border-radius: 8px;
-            box-shadow: 0 5px 30px rgba(0,0,0,0.5);
-            transform: scale(0.7);
-            transition: transform 0.3s ease;
-            border: 4px solid #fff;
-        }
+        /* Lightbox Popup Modal */
+        .modal-overlay { display: none; position: fixed; z-index: 2000; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.85); backdrop-filter: blur(5px); justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease; }
+        .modal-content-img { max-width: 90%; max-height: 85vh; border-radius: 8px; box-shadow: 0 5px 30px rgba(0,0,0,0.5); border: 4px solid #fff; }
         .modal-overlay.show { display: flex; opacity: 1; }
         .modal-overlay.show .modal-content-img { transform: scale(1); }
-        
-        .close-modal-btn {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            color: #fff;
-            font-size: 50px;
-            font-weight: 300;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-        .close-modal-btn:hover { color: #e67e22; }
+        .close-modal-btn { position: absolute; top: 20px; right: 30px; color: #fff; font-size: 50px; font-weight: 300; cursor: pointer; }
 
-        /* Clean Minimal Footer */
-        footer {
-            background: #2c3e50;
-            color: #bdc3c7;
-            text-align: center;
-            padding: 25px;
-            font-size: 14px;
-            font-weight: 500;
-            border-top: 4px solid #d4af37;
-        }
+        footer { background: #2c3e50; color: #bdc3c7; text-align: center; padding: 25px; font-size: 14px; font-weight: 500; border-top: 4px solid #d4af37; }
 
-        /* RESPONSIVE MOBILE BREAKPOINTS HANDLERS */
+        /* RESPONSIVE MOBILE BREAKPOINTS */
         @media (max-width: 768px) {
-            header { padding: 15px 5%; flex-direction: column; gap: 15px; text-align: center; }
+            header { padding: 15px 5%; flex-direction: column; gap: 15px; }
             nav { flex-wrap: wrap; justify-content: center; gap: 10px; }
             nav a { margin-left: 10px; margin-right: 10px; font-size: 13px; }
             section { padding: 50px 5%; }
             .hero h1 { font-size: 34px; }
-            .hero p { font-size: 16px; padding: 0; }
+            .hero p { font-size: 16px; }
+            .founder-section { flex-direction: column; padding: 25px; text-align: center; gap: 25px; }
+            .tracker-map-row { grid-template-columns: 1fr; gap: 30px; }
             .dashboard-container, .donate-box { padding: 20px; }
             .donate-details { min-width: 100%; text-align: center; }
-            .bank-info-card { text-align: left; }
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(5px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
@@ -659,8 +352,9 @@
         </div>
         <nav>
             <a href="#home">Home</a>
-            <a href="#impact">Our Impact</a>
+            <a href="#values">Our Values</a>
             <a href="#committee">Committee & MOA</a>
+            <a href="#gallery">Gallery</a>
             <a href="#audit">Audit Reports</a>
             <a href="#donate" class="nav-btn">Donate Now</a>
         </nav>
@@ -672,13 +366,11 @@
             <div class="slide" style="background-image: url('slider2.png');"></div>
             <div class="slide" style="background-image: url('slider1.jpg');"></div>
         </div>
-
         <div class="hero-content">
             <h1 id="layout-tagline">Bhole Ki Rasoi Seva Sansthan</h1>
             <p id="layout-subtagline">Seva Se Hi Jeevan - Providing Nutritious ₹10 Meals with Dignity</p>
             <a href="#donate" class="cta-btn" onclick="event.stopPropagation();">Support Our Cause</a>
         </div>
-        
         <div id="slider-indicator" class="slider-state-indicator">⏸ Click to Pause Image</div>
         <div class="slider-dots">
             <span class="dot active-dot" id="dot-0"></span>
@@ -687,10 +379,8 @@
         </div>
     </section>
 
+    <!-- SECTION: OUR IMPACT STATS -->
     <section id="impact">
-        <h2 class="section-title">Our Impact & Reach</h2>
-        <p class="section-subtitle">Real-time update of ground level change and verified transparency indicators.</p>
-        
         <div class="impact-container">
             <div class="impact-card">
                 <h2 id="cnt-meals">50,000+</h2>
@@ -710,27 +400,103 @@
         </div>
     </section>
 
-    <section id="committee" style="background-color: #f7f9fa; border-top: 1px solid #eaeaea;">
+    <!-- SECTION: OUR CORE VALUES -->
+    <section id="values" style="background-color: #f1f2f6; border-top: 1px solid #eaeaea;">
+        <h2 class="section-title">हमारे मुख्य सिद्धांत (Core Values)</h2>
+        <p class="section-subtitle">Professional identity and ethical values that guide our transparent mission.</p>
+        <div class="values-grid">
+            <div class="value-card">
+                <span class="value-icon">🤝</span>
+                <h3>Dignity (आत्मसम्मान)</h3>
+                <p>हम भोजन मुफ्त नहीं देते, बल्कि सिर्फ ₹10 में आदर और पूर्ण सम्मान के साथ खिलाते हैं ताकि लेने वाले का स्वाभिमान बना रहे।</p>
+            </div>
+            <div class="value-card">
+                <span class="value-icon">🥗</span>
+                <h3>Hygiene (शुद्धता)</h3>
+                <p>100% शुद्धता, साफ-सफाई और RO फिल्टर पानी का उपयोग। पौष्टिक और गरम घरेलू स्वादिष्ठ भोजन रोज़ाना तैयार किया जाता है।</p>
+            </div>
+            <div class="value-card">
+                <span class="value-icon">📜</span>
+                <h3>Transparency (पारदर्शिता)</h3>
+                <p>संस्थान को मिलने वाले एक-एक पैसे का संपूर्ण हिसाब-किताब सरकारी नियमों के अनुसार चार्टर्ड अकाउंटेंट (CA) द्वारा ऑडिटेड है।</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: FOUNDER MESSAGE -->
+    <section id="founder">
+        <div class="founder-section">
+            <div class="founder-img-box">
+                <img class="founder-img" src="founder.png" alt="Founder President">
+                <h4>Prabandhak / टीम</h4>
+                <p>Bhole Ki Rasoi Seva</p>
+            </div>
+            <div class="founder-text">
+                <h3 style="font-size: 24px; color: #2c3e50; font-weight: 800; margin-bottom: 15px;">संस्थापक संदेश (Founder's Message)</h3>
+                <blockquote>
+                    "हमारा एकमात्र संकल्प समाज के अंतिम छोर पर खड़े हर उस भाई-बहन की सेवा करना है, जो दिनभर मेहनत करने के बाद भी दो वक्त का सम्मानजनक भोजन नहीं जुटा पाते। भोजन केवल पेट भरने का माध्यम नहीं है, यह मनुष्य को जीने की शक्ति और समाज में आदर देता है। आप सभी के सहयोग से 'भोले की रसोई' निरंतर इस निस्वार्थ सेवा पथ पर अग्रसर है।"
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: LIVE TRACKER & MAP AREAS SCHEDULE -->
+    <section id="tracker-map" style="background-color: #f7f9fa; border-top: 1px solid #eaeaea;">
+        <div class="tracker-map-row">
+            <!-- Left Side: Live Transparency Tracker -->
+            <div class="tracker-card">
+                <h3>लाइव ट्रैकर बोर्ड (Live Seva Tracker)</h3>
+                <div class="tracker-row">
+                    <span class="tracker-date">Today Update</span>
+                    <span class="tracker-desc">310+ Meals Distributed Safely</span>
+                </div>
+                <div class="tracker-row">
+                    <span class="tracker-date">Yesterday</span>
+                    <span class="tracker-desc">305 People Fed with Dignity</span>
+                </div>
+                <div class="tracker-row">
+                    <span class="tracker-date">Weekly Status</span>
+                    <span class="tracker-desc">2,100+ Hot Meals Served on Ground</span>
+                </div>
+                <div class="tracker-row">
+                    <span class="tracker-date">Quality Check</span>
+                    <span class="tracker-desc">100% Fresh RO Water Used ✓</span>
+                </div>
+            </div>
+
+            <!-- Right Side: Location Schedule Map Card -->
+            <div class="map-card">
+                <h3>रसोई कहाँ मिलेगी? (Cart Location & Timing)</h3>
+                <div class="map-schedule-item">
+                    <div class="map-area">📍 Distribution Spot 1: Adhartal Area, Jabalpur</div>
+                    <div class="map-time">Timing: Daily Afternoon (12:30 PM to 2:30 PM)</div>
+                </div>
+                <div class="map-schedule-item">
+                    <div class="map-area">📍 Distribution Spot 2: Mobile Seva Cart Location</div>
+                    <div class="map-time">Timing: Daily Evening Schedule (As per Requirements)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: MOA DASHBOARD -->
+    <section id="committee">
         <h2 class="section-title">Official Documentation & Committee</h2>
         <p class="section-subtitle">Verified organization objectives, executive body details, and government registration authority.</p>
-        
         <div class="dashboard-container">
             <div class="tab-navigation">
                 <button class="tab-btn active-tab" onclick="switchDashboardTab(event, 'moa-objectives')">1. MOA Objectives</button>
                 <button class="tab-btn" onclick="switchDashboardTab(event, 'committee-members')">2. Executive Committee</button>
                 <button class="tab-btn" onclick="switchDashboardTab(event, 'authority-verification')">3. Official Verification</button>
             </div>
-
             <div id="moa-objectives" class="tab-content active-content">
                 <img class="dashboard-preview-img" src="moa 1 st page.png" alt="MOA Objectives Page 1" onclick="openPopupModal(this.src)">
                 <span class="click-hint">🔍 Click on image to view full size</span>
             </div>
-
             <div id="committee-members" class="tab-content">
                 <img class="dashboard-preview-img" src="moa 2 page.png" alt="Committee Members Page 2" onclick="openPopupModal(this.src)">
                 <span class="click-hint">🔍 Click on image to view full size</span>
             </div>
-
             <div id="authority-verification" class="tab-content">
                 <img class="dashboard-preview-img" src="moa 3 page.png" alt="Authority Verification Page 3" onclick="openPopupModal(this.src)">
                 <span class="click-hint">🔍 Click on image to view full size</span>
@@ -738,84 +504,102 @@
         </div>
     </section>
 
-    <!-- CLEAN AUDIT SECTION - NO POPUPS OR ITNA AAYA DETAILED SLIDERS -->
-    <section id="audit">
-        <h2 class="section-title">Fund Utilization Dashboard</h2>
-        <p class="section-subtitle">Official dynamic breakdown of expenditure and financial audit status indicators.</p>
-        
-        <div class="audit-container">
-            
-            <!-- Year 2022 - 2023 -->
-            <div class="audit-card">
-                <div class="audit-year">Financial Year 2022 - 2023</div>
-                <div class="audit-status">✓ CA Audited Balance Sheet</div>
-                
-                <div class="pie-chart-wrapper">
-                    <div class="pie-chart chart-22-23"></div>
-                </div>
-                
-                <div class="chart-legend-box">
-                    <div class="legend-item">
-                        <div class="legend-label"><span class="color-dot dot-orange"></span>Kirana & Veg. Exp</div>
-                        <div class="legend-amount">₹2,96,641.00</div>
-                    </div>
-                    <div class="legend-item">
-                        <div class="legend-label"><span class="color-dot dot-blue"></span>Rashan Expenses</div>
-                        <div class="legend-amount">₹2,31,246.00</div>
-                    </div>
-                    <div class="legend-item">
-                        <div class="legend-label"><span class="color-dot dot-green"></span>Salary & Wages</div>
-                        <div class="legend-amount">₹36,000.00</div>
-                    </div>
-                    <div class="legend-item">
-                        <div class="legend-label"><span class="color-dot dot-grey"></span>Other & CA Audit Fees</div>
-                        <div class="legend-amount">₹32,860.00</div>
-                    </div>
-                </div>
+    <!-- PREMIUM GALLERY GRID SECTION -->
+    <section id="gallery" style="background-color: #f7f9fa; border-top: 1px solid #eaeaea;">
+        <h2 class="section-title">सेवा दीर्घा (Photo Gallery)</h2>
+        <p class="section-subtitle">Real ground-level work glimpses of nutritious food preparation and distribution drives.</p>
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openPopupModal('gallery1.jpg')">
+                <img src="gallery1.jpg" alt="Rasoi Seva Photo">
+                <div class="gallery-overlay">भोजन वितरण सेवा</div>
             </div>
-
-            <!-- Year 2023 - 2024 -->
-            <div class="audit-card">
-                <div class="audit-year">Financial Year 2023 - 2024</div>
-                <div class="audit-status">✓ CA Audited Balance Sheet</div>
-                
-                <div class="pie-chart-wrapper">
-                    <div class="pie-chart chart-23-24"></div>
-                </div>
-                
-                <div class="chart-legend-box">
-                    <div class="legend-item">
-                        <div class="legend-label"><span class="color-dot dot-orange"></span>Kirana & Veg. Exp</div>
-                        <div class="legend-amount">₹339,240.00</div>
-                    </div>
-                    <div class="legend-item">
-                        <div class="legend-label"><span class="color-dot dot-blue"></span>Rashan Expenses</div>
-                        <div class="legend-amount">₹279,267.00</div>
-                    </div>
-                    <div class="legend-item">
-                        <div class="legend-label"><span class="color-dot dot-green"></span>Salary & Wages</div>
-                        <div class="legend-amount">₹48,000.00</div>
-                    </div>
-                    <div class="legend-item">
-                        <div class="legend-label"><span class="color-dot dot-grey"></span>Other & CA Audit Fees</div>
-                        <div class="legend-amount">₹29,415.00</div>
-                    </div>
-                </div>
+            <div class="gallery-item" onclick="openPopupModal('gallery2.jpg')">
+                <img src="gallery2.jpg" alt="Rasoi Seva Photo">
+                <div class="gallery-overlay">शुद्ध रसोई घर</div>
             </div>
-
-            <div class="ca-verification-bar">
-                📜 Accounts verified and certified as true copy by: Amit Rawat & Company (Chartered Accountants)
+            <div class="gallery-item" onclick="openPopupModal('gallery3.jpg')">
+                <img src="gallery3.jpg" alt="Rasoi Seva Photo">
+                <div class="gallery-overlay">अन्नपूर्णा प्रसाद</div>
             </div>
-
+            <div class="gallery-item" onclick="openPopupModal('gallery4.jpg')">
+                <img src="gallery4.jpg" alt="Rasoi Seva Photo">
+                <div class="gallery-overlay">मुस्कान और तृप्ति</div>
+            </div>
         </div>
     </section>
 
-    <section id="donate" style="background-color: #f7f9fa;">
+    <!-- AUDIT REPORT SECTION -->
+    <section id="audit">
+        <h2 class="section-title">Fund Utilization Dashboard</h2>
+        <p class="section-subtitle">Official dynamic breakdown of expenditure and financial audit status indicators.</p>
+        <div class="audit-container">
+            <div class="audit-card">
+                <div class="audit-year">Financial Year 2022 - 2023</div>
+                <div class="audit-status">✓ CA Audited Balance Sheet</div>
+                <div class="pie-chart-wrapper"><div class="pie-chart chart-22-23"></div></div>
+                <div class="chart-legend-box">
+                    <div class="legend-item"><div class="legend-label"><span class="color-dot dot-orange"></span>Kirana & Veg. Exp</div><div class="legend-amount">₹2,96,641.00</div></div>
+                    <div class="legend-item"><div class="legend-label"><span class="color-dot dot-blue"></span>Rashan Expenses</div><div class="legend-amount">₹2,31,246.00</div></div>
+                    <div class="legend-item"><div class="legend-label"><span class="color-dot dot-green"></span>Salary & Wages</div><div class="legend-amount">₹36,000.00</div></div>
+                    <div class="legend-item"><div class="legend-label"><span class="color-dot dot-grey"></span>Other & CA Audit Fees</div><div class="legend-amount">₹32,860.00</div></div>
+                </div>
+            </div>
+            <div class="audit-card">
+                <div class="audit-year">Financial Year 2023 - 2024</div>
+                <div class="audit-status">✓ CA Audited Balance Sheet</div>
+                <div class="pie-chart-wrapper"><div class="pie-chart chart-23-24"></div></div>
+                <div class="chart-legend-box">
+                    <div class="legend-item"><div class="legend-label"><span class="color-dot dot-orange"></span>Kirana & Veg. Exp</div><div class="legend-amount">₹339,240.00</div></div>
+                    <div class="legend-item"><div class="legend-label"><span class="color-dot dot-blue"></span>Rashan Expenses</div><div class="legend-amount">₹279,267.00</div></div>
+                    <div class="legend-item"><div class="legend-label"><span class="color-dot dot-green"></span>Salary & Wages</div><div class="legend-amount">₹48,000.00</div></div>
+                    <div class="legend-item"><div class="legend-label"><span class="color-dot dot-grey"></span>Other & CA Audit Fees</div><div class="legend-amount">₹29,415.00</div></div>
+                </div>
+            </div>
+            <div class="ca-verification-bar">📜 Accounts verified and certified as true copy by: Amit Rawat & Company (Chartered Accountants)</div>
+        </div>
+    </section>
+
+    <!-- FAQ ACCORDION SECTION -->
+    <section id="faqs" style="background-color: #f7f9fa; border-top: 1px solid #eaeaea;">
+        <h2 class="section-title">अक्सर पूछे जाने वाले सवाल (FAQs)</h2>
+        <p class="section-subtitle">Instantly resolve standard queries regarding our dynamic ground execution model.</p>
+        <div class="faq-wrapper">
+            <div class="faq-item">
+                <button class="faq-trigger" onclick="toggleFaq(this)">❓ क्या भोले की रसोई सरकारी संसथान है? <span>+</span></button>
+                <div class="faq-answer">नहीं, यह पूरी तरह से एक गैर-सरकारी, पंजीकृत स्वायत्त सेवा संस्थान (Registered Private Seva Sansthan NGO) है जो समाज के दानदाताओं के सहयोग से पूरी पारदर्शिता के साथ संचालित किया जाता है।</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-trigger" onclick="toggleFaq(this)">❓ खाना ₹10 में क्यों दिया जाता है, फ्री क्यों नहीं? <span>+</span></button>
+                <div class="faq-answer">खाना ₹10 में देने के पीछे मुख्य कारण भोजन ग्रहण करने वाले भाई-बहनों के आत्मसम्मान (Dignity) की रक्षा करना है ताकि उन्हें कभी यह न लगे कि वे मुफ्त का भोजन कर रहे हैं। साथ ही, टोकन प्राइस होने से भोजन की बर्बादी (Waste) बिल्कुल नहीं होती।</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-trigger" onclick="toggleFaq(this)">❓ दान किए गए पैसे का हिसाब कहाँ मिलेगा? <span>+</span></button>
+                <div class="faq-answer">हम पारदर्शिता में 100% विश्वास रखते हैं। आप इसी वेबसाइट के 'Audit Reports' सेक्शन में जाकर हर साल का अधिकृत चार्टर्ड अकाउंटेंट (CA) द्वारा वेरिफाइड इनकम-एक्सपेंडिचर और बैलेंस शीट का पूरा ब्यौरा लाइव देख सकते हैं।</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DONATION BOX & SPONSOR CALCULATOR SECTION -->
+    <section id="donate">
         <div class="donate-box">
             <div class="donate-details">
                 <h2>Help Us Feed More People</h2>
                 <p>Aapki choti si madad kisi ko aatmasamman ke sath pet bhar khana de sakti hai. Direct bank transfer ya QR code scan karke support karein.</p>
                 
+                <!-- SPONSORSHIP CALCULATOR WIDGET -->
+                <div class="calculator-wrapper">
+                    <h4>थाली स्पॉन्सरशिप कैलकुलेटर (Sponsor Impact)</h4>
+                    <div class="calc-buttons">
+                        <button class="calc-btn active-calc" onclick="calculateImpact(this, 100, 10)">₹100</button>
+                        <button class="calc-btn" onclick="calculateImpact(this, 500, 50)">₹500</button>
+                        <button class="calc-btn" onclick="calculateImpact(this, 1000, 100)">₹1,000</button>
+                        <button class="calc-btn" onclick="calculateImpact(this, 3000, 300)">₹3,000</button>
+                    </div>
+                    <div class="calc-result-box" id="calc-result-text">
+                        Aapki ₹100 ki seva se 10 Bhai-Beheno ko aatmasamman ke sath garam bhojan milega!
+                    </div>
+                </div>
+
                 <div class="bank-info-card">
                     <p id="layout-bank-name">Bank Name: HDFC Bank - Panagar Jabalpur</p>
                     <p id="layout-bank-acc-holder"> Name : Bhole Ki Rasoi Seva Sansthan </p>
@@ -823,14 +607,10 @@
                     <p id="layout-bank-ifsc">IFSC Code: HDFC0006351</p>
                     <p id="layout-reg-no" style="margin-top: 10px; font-size: 13px; color: #7f8c8d;"></p>
                 </div>
-
                 <div>
-                    <a href="certificate_registration.png" target="_blank" class="cert-link-btn">
-                        📄 View Govt. Registration Certificate
-                    </a>
+                    <a href="certificate_registration.png" target="_blank" class="cert-link-btn">📄 View Govt. Registration Certificate</a>
                 </div>
             </div>
-            
             <div class="qr-container">
                 <img class="qr-card-img" id="layout-qr-img" src="qr-code.png" alt="Donation QR" onclick="openPopupModal(this.src)" style="cursor: pointer;">
                 <span>Scan to Donate</span>
@@ -838,9 +618,10 @@
         </div>
     </section>
 
+    <!-- Global Lightbox -->
     <div id="global-popup-modal" class="modal-overlay" onclick="closePopupModal()">
         <span class="close-modal-btn">&times;</span>
-        <img class="modal-content-img" id="modal-popup-target-img" src="" alt="Enlarged Document View">
+        <img class="modal-content-img" id="modal-popup-target-img" src="" alt="Enlarged Document">
     </div>
 
     <footer>
@@ -850,34 +631,23 @@
     <script src="data.js"></script>
 
     <script>
-        // Committee Tab Logic
+        // Tab Navigation Switcher
         function switchDashboardTab(event, tabId) {
             const contentItems = document.getElementsByClassName("tab-content");
-            for (let i = 0; i < contentItems.length; i++) {
-                contentItems[i].classList.remove("active-content");
-            }
+            for (let i = 0; i < contentItems.length; i++) { contentItems[i].classList.remove("active-content"); }
             const tabButtons = document.getElementsByClassName("tab-btn");
-            for (let i = 0; i < tabButtons.length; i++) {
-                tabButtons[i].classList.remove("active-tab");
-            }
+            for (let i = 0; i < tabButtons.length; i++) { tabButtons[i].classList.remove("active-tab"); }
             document.getElementById(tabId).classList.add("active-content");
             event.currentTarget.classList.add("active-tab");
         }
 
         // Hero Slider Controls
-        let sliderPaused = false;
-        let currentTransformX = 0;
-        let dotInterval = null;
-
+        let sliderPaused = false, currentTransformX = 0, dotInterval = null;
         function toggleHeroSlider() {
-            const slider = document.getElementById("hero-slider");
-            const indicator = document.getElementById("slider-indicator");
-            
+            const slider = document.getElementById("hero-slider"), indicator = document.getElementById("slider-indicator");
             if (!sliderPaused) {
-                const computedStyle = window.getComputedStyle(slider);
-                const matrix = new WebKitCSSMatrix(computedStyle.transform);
+                const matrix = new WebKitCSSMatrix(window.getComputedStyle(slider).transform);
                 currentTransformX = matrix.m41;
-                
                 slider.classList.remove("slider-running");
                 slider.style.transform = `translateX(${currentTransformX}px)`;
                 indicator.innerText = "▶ Click to Resume Slider";
@@ -891,36 +661,45 @@
                 startDotTrackerLoop();
             }
         }
-
         function startDotTrackerLoop() {
             if(dotInterval) clearInterval(dotInterval);
-            const slider = document.getElementById("hero-slider");
-            const dots = document.querySelectorAll(".dot");
-            
+            const slider = document.getElementById("hero-slider"), dots = document.querySelectorAll(".dot");
             dotInterval = setInterval(() => {
-                const computedStyle = window.getComputedStyle(slider);
-                const matrix = new WebKitCSSMatrix(computedStyle.transform);
-                const width = window.innerWidth * 3; 
-                const currentPos = Math.abs(matrix.m41);
-                const activeIndex = Math.round((currentPos / width) * 3) % 3;
-                
+                const matrix = new WebKitCSSMatrix(window.getComputedStyle(slider).transform);
+                const activeIndex = Math.round((Math.abs(matrix.m41) / (window.innerWidth * 3)) * 3) % 3;
                 dots.forEach(d => d.classList.remove("active-dot"));
-                if(document.getElementById(`dot-${activeIndex}`)) {
-                    document.getElementById(`dot-${activeIndex}`).classList.add("active-dot");
-                }
+                if(document.getElementById(`dot-${activeIndex}`)) document.getElementById(`dot-${activeIndex}`).classList.add("active-dot");
             }, 500);
         }
         window.addEventListener("DOMContentLoaded", startDotTrackerLoop);
 
-        // Global Lightbox
+        // Meal Sponsorship Calculator Logic
+        function calculateImpact(btn, amount, people) {
+            document.querySelectorAll(".calc-btn").forEach(b => b.classList.remove("active-calc"));
+            btn.classList.add("active-calc");
+            let suffix = amount === 3000 ? " (Ek poore din ki rasoi)!" : "!";
+            document.getElementById("calc-result-text").innerText = `Aapki ₹${amount} ki seva se ${people} Bhai-Beheno ko aatmasamman ke sath garam bhojan milega${suffix}`;
+        }
+
+        // FAQ Accordion Native Toggle
+        function toggleFaq(trigger) {
+            const item = trigger.parentElement;
+            const isOpen = item.classList.contains("open");
+            document.querySelectorAll(".faq-item").forEach(i => i.classList.remove("open"));
+            document.querySelectorAll(".faq-trigger span").forEach(s => s.innerText = "+");
+            if (!isOpen) {
+                item.classList.add("open");
+                trigger.querySelector("span").innerText = "−";
+            }
+        }
+
+        // Global Lightbox Popups
         function openPopupModal(imageSrc) {
             const modal = document.getElementById("global-popup-modal");
-            const modalImg = document.getElementById("modal-popup-target-img");
-            modalImg.src = imageSrc;
+            document.getElementById("modal-popup-target-img").src = imageSrc;
             modal.style.display = "flex";
             setTimeout(() => { modal.classList.add("show"); }, 10);
         }
-
         function closePopupModal() {
             const modal = document.getElementById("global-popup-modal");
             modal.classList.remove("show");
