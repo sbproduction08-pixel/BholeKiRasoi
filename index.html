@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bhole Ki Rasoi Seva Sansthan - ₹10 Meal Premium</title>
+    <title>Bhole Ki Rasoi Seva Sansthan - ₹10 Meal</title>
     <style>
         /* Modern Premium CSS Reset */
         * {
@@ -355,6 +355,54 @@
             letter-spacing: 1px;
         }
 
+        /* ==========================================
+           FIX: LIGHTBOX POPUP MODAL STYLES
+           ========================================== */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(5px);
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .modal-content-img {
+            max-width: 90%;
+            max-height: 75vh;
+            border-radius: 12px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.5);
+            transform: scale(0.7);
+            transition: transform 0.3s ease;
+            border: 5px solid #fff;
+        }
+        .modal-overlay.show {
+            display: flex;
+            opacity: 1;
+        }
+        .modal-overlay.show .modal-content-img {
+            transform: scale(1);
+        }
+        .close-modal-btn {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #fff;
+            font-size: 50px;
+            font-weight: 300;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .close-modal-btn:hover {
+            color: #e67e22;
+        }
+
         /* Clean Minimal Footer */
         footer {
             background: #2c3e50;
@@ -382,7 +430,6 @@
     </header>
 
     <section id="home" class="hero">
-        
         <div class="slider-container">
             <div class="slide" style="background-image: url('slider3.png');"></div>
             <div class="slide" style="background-image: url('slider2.png');"></div>
@@ -394,7 +441,6 @@
             <p id="layout-subtagline">Seva Se Hi Jeevan - Providing Nutritious ₹10 Meals with Dignity</p>
             <a href="#donate" class="cta-btn">Support Our Cause</a>
         </div>
-        
     </section>
 
     <section id="impact">
@@ -442,16 +488,43 @@
             </div>
             
             <div class="qr-container">
-                <img class="qr-card-img" id="layout-qr-img" src="qr-code.png" alt="Donation QR">
+                <img class="qr-card-img" id="layout-qr-img" src="qr-code.png" alt="Donation QR" onclick="openQRModal()" style="cursor: pointer;">
                 <span>Scan to Donate</span>
             </div>
         </div>
     </section>
 
+    <div id="qr-modal" class="modal-overlay" onclick="closeQRModal()">
+        <span class="close-modal-btn">&times;</span>
+        <img class="modal-content-img" id="modal-qr-img" src="" alt="Enlarged QR">
+    </div>
+
     <footer>
-        <p>© 2026 Bhole Ki Rasoi Seva Sansthan. Registered under MP Society Registration Act, 1973 (Reg No: 04/14/01/22327/21). Managed 100% Secure via GitHub Pages.</p>
+        <p> © 2026 Bhole Ki Rasoi Seva Sansthan. Registered under MP Society Registration Act, 1973 (Reg No: 04/14/01/22327/21). Managed 100% Secure via shree balaji Poduction - HARYANA .</p>
     </footer>
 
     <script src="data.js"></script>
+
+    <script>
+        function openQRModal() {
+            const modal = document.getElementById("qr-modal");
+            const mainQR = document.getElementById("layout-qr-img");
+            const modalQR = document.getElementById("modal-qr-img");
+            
+            modalQR.src = mainQR.src;
+            modal.style.display = "flex";
+            setTimeout(() => {
+                modal.classList.add("show");
+            }, 10);
+        }
+
+        function closeQRModal() {
+            const modal = document.getElementById("qr-modal");
+            modal.classList.remove("show");
+            setTimeout(() => {
+                modal.style.display = "none";
+            }, 300);
+        }
+    </script>
 </body>
 </html>
